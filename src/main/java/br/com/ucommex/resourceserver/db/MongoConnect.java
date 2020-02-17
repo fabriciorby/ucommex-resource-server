@@ -31,7 +31,9 @@ public class MongoConnect {
     public static MongoDatabase getDatabase() {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
-        MongoDatabase database = getInstance().getDatabase("ucommex").withCodecRegistry(pojoCodecRegistry);
+        String databaseName = StringUtils.isEmpty(System.getenv("MONGODB_NAME")) ?
+                "ucommex" : System.getenv("MONGODB_NAME");
+        MongoDatabase database = getInstance().getDatabase(databaseName).withCodecRegistry(pojoCodecRegistry);
         return database;
     }
 
