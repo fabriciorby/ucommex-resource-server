@@ -6,6 +6,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
+import org.springframework.util.StringUtils;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -21,7 +22,9 @@ public class MongoConnect {
     public static MongoClient getInstance() {
         if (mongoClient != null)
             return mongoClient;
-        mongoClient = MongoClients.create("mongodb://localhost:27017");
+        String mongoURI = StringUtils.isEmpty(System.getenv("MONGODB_URI")) ?
+                "mongodb://localhost:27017" : System.getenv("MONGODB_URI");
+        mongoClient = MongoClients.create(mongoURI);
         return mongoClient;
     }
 
