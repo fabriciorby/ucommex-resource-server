@@ -1,10 +1,12 @@
+package br.com.ucommex.resourceserver.feedback.pojo;
 
-package br.com.ucommex.resourceserver.feedback.dto;
-
+import br.com.ucommex.resourceserver.db.ObjectDB;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class EmployeeFeedbackDTO {
+@EqualsAndHashCode(callSuper = true)
+public class EmployeeFeedback extends ObjectDB {
     private String idLojista;
     private String cpfCliente;
     private Boolean converteu;

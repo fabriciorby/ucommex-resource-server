@@ -1,5 +1,6 @@
 package br.com.ucommex.resourceserver.customer.pojo;
 
+import br.com.ucommex.resourceserver.db.ObjectDB;
 import lombok.Data;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
@@ -8,8 +9,6 @@ import java.math.BigDecimal;
 
 @Data
 public class ProdutoDB extends ObjectDB {
-
-    private ObjectId id;
     private String descricao;
     private String categoria;
     private String linha;
@@ -29,5 +28,4 @@ public class ProdutoDB extends ObjectDB {
 
     @BsonProperty(value = "id_compra")
     private String idCompra;
-
 }

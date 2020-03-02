@@ -1,9 +1,9 @@
-package br.com.ucommex.resourceserver.customer.pojo;
+package br.com.ucommex.resourceserver.db;
 
 import lombok.Data;
 import org.bson.types.ObjectId;
 
 @Data
 public class ObjectDB {
-    protected ObjectId id;
+    private ObjectId id;
 }

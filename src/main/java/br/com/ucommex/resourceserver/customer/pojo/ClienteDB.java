@@ -1,5 +1,6 @@
 package br.com.ucommex.resourceserver.customer.pojo;
 
+import br.com.ucommex.resourceserver.db.ObjectDB;
 import lombok.Data;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
@@ -8,9 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-public class ClienteDB extends ObjectDB{
-
-    private ObjectId id;
+public class ClienteDB extends ObjectDB {
     private String cpf;
     private String nome;
     private Character genero;
@@ -23,5 +22,4 @@ public class ClienteDB extends ObjectDB{
 
     @BsonProperty(value = "data_cadastro")
     private Date dataCadastro;
-
 }

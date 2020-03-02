@@ -7,5 +7,5 @@ public class CustomerFeedbackDTO {
     private String cpf;
     private String infoAtendimento;
     private String infoAtendimentoOutraLoja;
-    private long nps;
+    private int nps;
 }
