@@ -1,9 +1,9 @@
-package br.com.ucommex.resourceserver.helper;
+package br.com.ucommex.resourceserver.customer.helper;
 
-import br.com.ucommex.resourceserver.dto.*;
-import br.com.ucommex.resourceserver.pojo.ClienteDB;
-import br.com.ucommex.resourceserver.pojo.CompraDB;
-import br.com.ucommex.resourceserver.pojo.ProdutoDB;
+import br.com.ucommex.resourceserver.customer.dto.*;
+import br.com.ucommex.resourceserver.customer.pojo.ClienteDB;
+import br.com.ucommex.resourceserver.customer.pojo.CompraDB;
+import br.com.ucommex.resourceserver.customer.pojo.ProdutoDB;
 import com.mongodb.client.MongoCollection;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

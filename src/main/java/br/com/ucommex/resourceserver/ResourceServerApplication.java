@@ -1,6 +1,5 @@
 package br.com.ucommex.resourceserver;
 
-import br.com.ucommex.resourceserver.helper.CustomerHelper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

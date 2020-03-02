@@ -1,4 +1,4 @@
-package br.com.ucommex.resourceserver.pojo;
+package br.com.ucommex.resourceserver.customer.pojo;
 
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
